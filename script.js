@@ -772,6 +772,14 @@ function initializeMobileNav() {
         document.body.appendChild(overlay);
     }
 
+    const openMenu = () => {
+        mainNav.classList.add('open');
+        overlay.classList.add('active');
+        toggleBtn.classList.add('active');
+        toggleBtn.setAttribute('aria-expanded', 'true');
+        document.body.classList.add('menu-open');
+    };
+
     const closeMenu = () => {
         mainNav.classList.remove('open');
         overlay.classList.remove('active');
@@ -781,15 +789,15 @@ function initializeMobileNav() {
         resetMobileSubmenus();
     };
 
-    // Expose closeMenu for other handlers (e.g., submenu links)
+    // Expose menu controls for other handlers (e.g., logo tap)
+    window.turkesaOpenMobileMenu = openMenu;
     window.turkesaCloseMobileMenu = closeMenu;
-
-    const openMenu = () => {
-        mainNav.classList.add('open');
-        overlay.classList.add('active');
-        toggleBtn.classList.add('active');
-        toggleBtn.setAttribute('aria-expanded', 'true');
-        document.body.classList.add('menu-open');
+    window.turkesaToggleMobileMenu = () => {
+        if (mainNav.classList.contains('open')) {
+            closeMenu();
+        } else {
+            openMenu();
+        }
     };
 
     toggleBtn.addEventListener('click', () => {
@@ -890,14 +898,27 @@ function initializeEventListeners() {
         });
     }
 
-    // Logo Link - Return to Landing Page
-    const logoLink = document.getElementById('logoLink');
+    // Logo Link - Return to Landing Page / Open mobile menu
+    const logoLink = document.getElementById('logoLink') || document.querySelector('.logo a');
     if (logoLink) {
         logoLink.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.location.hash = '';
-            filterByCategory('all');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            const isMobile = window.innerWidth <= 980;
+            const canOpenMobileMenu = isMobile && typeof window.turkesaOpenMobileMenu === 'function';
+            const productGrid = document.getElementById('productGrid');
+
+            if (canOpenMobileMenu) {
+                e.preventDefault();
+                window.turkesaOpenMobileMenu();
+                return;
+            }
+
+            if (productGrid) {
+                e.preventDefault();
+                window.location.hash = '';
+                filterByCategory('all');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+            // If there's no product grid (policy/checkout pages), allow default navigation to index
         });
     }
 
