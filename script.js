@@ -898,27 +898,19 @@ function initializeEventListeners() {
         });
     }
 
-    // Logo Link - Return to Landing Page / Open mobile menu
+    // Logo Link - Return to Landing Page
     const logoLink = document.getElementById('logoLink') || document.querySelector('.logo a');
     if (logoLink) {
         logoLink.addEventListener('click', (e) => {
-            const isMobile = window.innerWidth <= 980;
-            const canOpenMobileMenu = isMobile && typeof window.turkesaOpenMobileMenu === 'function';
             const productGrid = document.getElementById('productGrid');
 
-            if (canOpenMobileMenu) {
-                e.preventDefault();
-                window.turkesaOpenMobileMenu();
-                return;
-            }
-
-            if (productGrid) {
+            if (productGrid) { // Already on landing page
                 e.preventDefault();
                 window.location.hash = '';
                 filterByCategory('all');
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             }
-            // If there's no product grid (policy/checkout pages), allow default navigation to index
+            // Other pages keep default navigation to index.html
         });
     }
 
