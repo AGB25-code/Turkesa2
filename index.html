@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turkesa - Fashion Store</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Cookie Consent Banner -->
+    <div id="cookieConsent" class="cookie-banner">
+        <div class="cookie-content">
+            <p>Utilizamos cookies para melhorar a sua experiência. Ao continuar a navegar, aceita a nossa política de cookies.</p>
+            <div class="cookie-buttons">
+                <button id="acceptCookies" class="btn-primary">Aceitar Todos</button>
+                <button id="manageCookies" class="btn-secondary">Gerir Preferências</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="announcement-bar">
+            <p data-i18n="announcementBar">Portes grátis em compras superiores a 50€</p>
+        </div>
+
+        <nav class="navbar">
+            <div class="container">
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Abrir menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="logo">
+                    <a href="index.html" id="logoLink">
+                        <img src="logo.png" alt="Turkesa" class="logo-img">
+                    </a>
+                </div>
+                <div class="nav-right">
+                    <button class="icon-btn search-btn" id="searchBtn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                    <a href="login.html" class="icon-btn account-btn" id="accountBtn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </a>
+                    <button class="icon-btn cart-btn" id="cartBtn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Navigation -->
+        <div class="main-nav" id="mainNav">
+            <div class="container">
+                <ul class="nav-links">
+                    <li class="nav-item has-submenu">
+                        <a href="#new" class="nav-novidades" data-i18n="navNew">Novidades</a>
+                        <div class="submenu">
+                            <div class="submenu-content">
+                                <div class="submenu-column">
+                                    <h4>Roupa</h4>
+                                    <ul>
+                                        <li><a href="#new-dresses">Vestidos</a></li>
+                                        <li><a href="#new-tops">Tops & Camisas</a></li>
+                                        <li><a href="#new-bottoms">Calças & Saias</a></li>
+                                        <li><a href="#new-outerwear">Casacos</a></li>
+                                    </ul>
+                                </div>
+                                <div class="submenu-column">
+                                    <h4>Acessórios</h4>
+                                    <ul>
+                                        <li><a href="#new-bags">Malas</a></li>
+                                        <li><a href="#new-shoes">Sapatos</a></li>
+                                        <li><a href="#new-jewelry">Joias</a></li>
+                                    </ul>
+                                </div>
+                                <div class="submenu-featured">
+                                    <a href="#new-collection" class="featured-card">
+                                        <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=400&h=500&fit=crop" alt="Nova Coleção">
+                                        <div class="featured-overlay">
+                                            <h4>Nova Coleção</h4>
+                                            <p>Descobre as últimas tendências</p>
+                                            <span class="featured-cta">Explorar →</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item has-submenu">
+                        <a href="#collection" data-i18n="navCollection">Nova Coleção</a>
+                        <div class="submenu submenu-large">
+                            <div class="submenu-content">
+                                <div class="submenu-column">
+                                    <h4>Roupa</h4>
+                                    <ul>
+                                        <li><a href="#women-dresses">Vestidos</a></li>
+                                        <li><a href="#women-tops">Tops & Camisas</a></li>
+                                        <li><a href="#women-bottoms">Calças & Saias</a></li>
+                                        <li><a href="#women-outerwear">Casacos</a></li>
+                                        <li><a href="#women-knitwear">Malhas</a></li>
+                                    </ul>
+                                </div>
+                                <div class="submenu-column">
+                                    <h4>Ocasião</h4>
+                                    <ul>
+                                        <li><a href="#women-casual">Casual</a></li>
+                                        <li><a href="#women-formal">Formal</a></li>
+                                        <li><a href="#women-sport">Desportivo</a></li>
+                                        <li><a href="#women-evening">Noite</a></li>
+                                    </ul>
+                                </div>
+                                <div class="submenu-featured-grid">
+                                    <a href="#women-dresses" class="featured-mini">
+                                        <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=300&h=350&fit=crop" alt="Vestidos">
+                                        <div class="featured-mini-overlay">
+                                            <span>Vestidos</span>
+                                        </div>
+                                    </a>
+                                    <a href="#women-bags" class="featured-mini">
+                                        <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=300&h=350&fit=crop" alt="Malas">
+                                        <div class="featured-mini-overlay">
+                                            <span>Malas</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item has-submenu">
+                        <a href="#sale" data-i18n="navOutlet">Outlet</a>
+                        <div class="submenu submenu-sale">
+                            <div class="submenu-content">
+                                <div class="submenu-column">
+                                    <h4>Outlet</h4>
+                                    <ul>
+                                        <li><a href="#sale-all">Tudo em Outlet</a></li>
+                                        <li><a href="#sale-50">Até 50% Off</a></li>
+                                        <li><a href="#sale-70">Até 70% Off</a></li>
+                                        <li><a href="#sale-final">Outlet Final</a></li>
+                                    </ul>
+                                </div>
+                                <div class="submenu-featured sale-promo">
+                                    <div class="sale-badge">
+                                        <span class="sale-percentage">Até 70%</span>
+                                        <span class="sale-text">Descontos</span>
+                                    </div>
+                                    <p>Aproveita os melhores preços da temporada</p>
+                                    <a href="#sale-all" class="btn-sale">Ver Tudo em Outlet</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <a href="#novidades">
+            <img src="landingPage.png" alt="Turkesa Landing" class="hero-image">
+        </a>
+    </section>
+
+    <!-- Novidades Section -->
+    <span id="new" class="nav-anchor"></span>
+    <span id="collection" class="nav-anchor"></span>
+    <span id="sale" class="nav-anchor"></span>
+    <section class="novidades-section" id="novidades">
+        <div class="novidades-container">
+            <div class="novidades-header">
+                <h2 data-i18n="novidadesTitle">NOVIDADES</h2>
+                <a href="#all-new" class="ver-tudo" data-i18n="verTudo">ver tudo</a>
+            </div>
+
+            <div class="novidades-carousel">
+                <button class="carousel-btn carousel-prev" id="prevBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M15 18l-6-6 6-6"/>
+                    </svg>
+                </button>
+
+                <div class="novidades-track-container">
+                    <div class="novidades-track" id="novidadesTrack">
+                        <!-- Product cards will be dynamically loaded here -->
+                    </div>
+                </div>
+
+                <button class="carousel-btn carousel-next" id="nextBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 18l6-6-6-6"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About/Biography Section -->
+    <section class="about-biography">
+        <div class="about-container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <div class="about-image-wrapper">
+                        <img src="SobreNos.png" alt="Sobre Turkesa">
+                        <div class="about-image-overlay"></div>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <div class="about-content-inner">
+                        <p class="about-subtitle handwritten-quote" data-i18n="aboutSubtitle">From Turkesa with love</p>
+                        <div class="about-wave-container">
+                            <img src="wave.png" alt="Turkesa" class="about-wave-image">
+                        </div>
+                        <div class="about-text">
+                            <p data-i18n="aboutText1">O nome "Turkêsa" surge da inspiração nos mares de cor azul turquesa. Transmite energia boa e transporta-nos para paisagens paradisíacas.</p>
+                            <p data-i18n="aboutText2">O objetivo da nossa loja é proporcionar a todas as nossas clientes, a confiança, a beleza, o bem-estar e a força necessária para enfrentar o dia-a-dia. Todas as mulheres são bonitas quando se sentem bonitas. A Turkêsa faz-te sentir ainda mais bonita.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Info Column -->
+                <div class="footer-column">
+                    <h4 data-i18n="footerInfo">Info</h4>
+                    <ul>
+                        <li><a href="contactos.html" data-i18n="footerContactos">Contactos</a></li>
+                        <li><a href="gift-card.html" data-i18n="footerGiftCard">Gift card</a></li>
+                        <li><a href="faq.html" data-i18n="footerFaq">FAQ's</a></li>
+                        <li><a href="envios.html" data-i18n="footerEnvios">Envios</a></li>
+                        <li><a href="trocas.html" data-i18n="footerTrocas">Trocas e devoluções</a></li>
+                    </ul>
+                </div>
+
+                <!-- Políticas Column -->
+                <div class="footer-column">
+                    <h4 data-i18n="footerPoliticas">Políticas</h4>
+                    <ul>
+                        <li><a href="termos.html" data-i18n="footerTermos">Termos e condições</a></li>
+                        <li><a href="privacidade.html" data-i18n="footerPrivacidade">Política de Privacidade e Cookies</a></li>
+                        <li><a href="litigios.html" data-i18n="footerLitigios">Resolução de Litígios</a></li>
+                        <li><a href="https://www.livroreclamacoes.pt/" target="_blank" rel="noopener noreferrer" data-i18n="footerReclamacoes">Livro de Reclamações</a></li>
+                    </ul>
+                </div>
+
+                <!-- Apoio ao Cliente Column -->
+                <div class="footer-column">
+                    <h4 data-i18n="footerApoio">Apoio ao Cliente</h4>
+                    <ul>
+                        <li data-i18n="footerHorario">De Seg. a Sáb. das 10H às 19H</li>
+                        <li data-i18n="footerTelemovel">Telemovel & Whatsapp: 936 189 715</li>
+                        <li data-i18n="footerChamada">(Chamada para rede móvel nacional)</li>
+                        <li data-i18n="footerEmail">Email: turkesashop@gmail.com</li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter Column -->
+                <div class="footer-column footer-newsletter">
+                    <h4 data-i18n="footerNewsletter">Keep up with Turkesa</h4>
+                    <p data-i18n="footerNewsletterText">Subscreve a nossa newsletter e recebe todas as novidades e campanhas no teu email.</p>
+                    <form class="newsletter-form">
+                        <input type="text" placeholder="Nome" data-i18n="footerNome" required>
+                        <input type="email" placeholder="Email" data-i18n="footerEmailPlaceholder" required>
+                        <button type="submit" class="btn-subscribe" data-i18n="footerSubscribe">SUBSCREVER</button>
+                    </form>
+                    <p class="footer-legal-text" data-i18n="footerLegalText">Este site está protegido pela Política de privacidade da hCaptcha e da hCaptcha e aplicam-se os Termos de serviço dos mesmos</p>
+                </div>
+            </div>
+
+            <!-- Social Media -->
+            <div class="footer-social-section">
+                <h4 data-i18n="footerSocial">Redes sociais</h4>
+                <div class="footer-social-icons">
+                    <a href="https://www.instagram.com/turkesashop_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                    <a href="https://www.facebook.com/turkesashop/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="footer-bottom-left">
+                    <div class="language-selector-footer">
+                        <button class="language-option-footer" data-lang="pt">PT</button>
+                        <button class="language-option-footer" data-lang="en">EN</button>
+                        <button class="language-option-footer" data-lang="es">ES</button>
+                    </div>
+                    <select class="footer-select">
+                        <option>EUR €</option>
+                    </select>
+                </div>
+                <div class="footer-bottom-center">
+                    <p data-i18n="footerCopyright">© Todos os direitos reservados 2025 . Turkesa Shop . Powered by A&B services</p>
+                </div>
+                <div class="footer-bottom-right">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/200px-Mastercard-logo.svg.png" alt="Mastercard">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Pay">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3 data-i18n="cartTitle">Carrinho</h3>
+            <button class="close-cart" id="closeCart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart" data-i18n="cartEmpty">O seu carrinho está vazio</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span data-i18n="cartTotal">Total:</span>
+                <span id="cartTotal">0.00€</span>
+            </div>
+            <button class="btn-primary checkout-btn" data-i18n="cartCheckout">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- Discount Popup -->
+    <div id="discountPopupOverlay" class="popup-overlay">
+        <div class="popup-modal">
+            <div class="popup-language-selector">
+                <button class="popup-lang-btn active" data-popup-lang="pt">PT</button>
+                <span class="popup-lang-divider">|</span>
+                <button class="popup-lang-btn" data-popup-lang="en">EN</button>
+                <span class="popup-lang-divider">|</span>
+                <button class="popup-lang-btn" data-popup-lang="es">ES</button>
+            </div>
+            <div class="popup-content">
+                <p class="popup-question" data-i18n="popupQuestion">Do you want</p>
+                <h2 class="popup-discount" data-i18n="popupDiscount">10% OFF</h2>
+                <p class="popup-subtitle" data-i18n="popupSubtitle">Your first order</p>
+                <input type="email" class="popup-email-input" id="popupEmail" data-i18n-placeholder="popupEmailPlaceholder" placeholder="Enter your email" required>
+                <button class="popup-btn-yes" id="popupSubmit" data-i18n="popupButtonYes">Get my 10%</button>
+                <button class="popup-btn-no" data-i18n="popupButtonNo">NO, I WANT TO PAY FULL PRICE</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search Modal -->
+    <div id="searchModalOverlay" class="search-modal-overlay">
+        <div class="search-modal">
+            <button class="search-modal-close" id="searchModalClose">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div class="search-modal-content">
+                <h2 class="search-modal-title" data-i18n="searchTitle">O que procura?</h2>
+                <div class="search-input-wrapper">
+                    <svg class="search-input-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input type="text" class="search-modal-input" id="searchModalInput" data-i18n-placeholder="searchPlaceholder" placeholder="Pesquisar produtos...">
+                </div>
+                <button class="search-modal-btn" id="searchModalBtn" data-i18n="searchButton">Pesquisar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/351936189715?text=Olá!%20Gostaria%20de%20mais%20informações." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <script src="translations.js"></script>
+    <script src="language.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
