@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vestido Floral Verão - Turkesa</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="product.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="announcement-bar">
+            <p>Portes grátis em compras superiores a 50€</p>
+        </div>
+
+        <nav class="navbar">
+            <div class="container">
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Abrir menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="logo">
+                    <a href="index.html" id="logoLink">
+                        <img src="logo.png" alt="Turkesa" class="logo-img">
+                    </a>
+                </div>
+                <div class="nav-right">
+                    <button class="icon-btn search-btn" id="searchBtn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                    <a href="login.html" class="icon-btn account-btn" id="accountBtn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </a>
+                    <button class="icon-btn cart-btn" id="cartBtn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                        </svg>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Navigation -->
+        <div class="main-nav" id="mainNav">
+            <div class="container">
+                <ul class="nav-links">
+                    <li class="nav-item"><a href="index.html#new" class="nav-novidades">Novidades</a></li>
+                    <li class="nav-item"><a href="index.html#collection">Nova Coleção</a></li>
+                    <li class="nav-item"><a href="index.html#sale">Outlet</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Product Details Section -->
+    <section class="product-details-section">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <nav class="breadcrumb">
+                <a href="index.html">Início</a>
+                <span>/</span>
+                <a href="index.html#women">Mulher</a>
+                <span>/</span>
+                <span>Vestidos</span>
+            </nav>
+
+            <div class="product-details-grid">
+                <!-- Left Side - Product Images -->
+                <div class="product-images">
+                    <div class="product-main-image">
+                        <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=800&h=1000&fit=crop" alt="Vestido Floral Verão" id="mainImage">
+                    </div>
+                    <div class="product-thumbnails">
+                        <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=200&h=250&fit=crop" alt="Vestido 1" class="thumbnail active" data-image="https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=800&h=1000&fit=crop">
+                        <img src="https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=200&h=250&fit=crop" alt="Vestido 2" class="thumbnail" data-image="https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=800&h=1000&fit=crop">
+                        <img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=200&h=250&fit=crop" alt="Vestido 3" class="thumbnail" data-image="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=800&h=1000&fit=crop">
+                        <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=200&h=250&fit=crop" alt="Vestido 4" class="thumbnail" data-image="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=800&h=1000&fit=crop">
+                    </div>
+                </div>
+
+                <!-- Right Side - Product Info -->
+                <div class="product-info">
+                    <h1 class="product-title">Vestido Floral Verão | Turkesa Collection</h1>
+                    <p class="product-price">€89,00</p>
+
+                    <!-- Size Selector -->
+                    <div class="product-option">
+                        <label>Tamanho</label>
+                        <select class="product-select" id="sizeSelect">
+                            <option value="">Selecione o tamanho</option>
+                            <option value="xs">XS</option>
+                            <option value="s">S</option>
+                            <option value="m">M</option>
+                            <option value="l">L</option>
+                            <option value="xl">XL</option>
+                        </select>
+                    </div>
+
+                    <!-- Quantity Selector -->
+                    <div class="product-option">
+                        <label>Quantidade</label>
+                        <div class="quantity-selector">
+                            <button class="qty-btn" id="decreaseQty">-</button>
+                            <input type="number" value="1" min="1" max="10" id="quantityInput" readonly>
+                            <button class="qty-btn" id="increaseQty">+</button>
+                        </div>
+                    </div>
+
+                    <!-- Add to Cart Button -->
+                    <button class="btn-add-to-cart" id="addToCartBtn">Adicionar ao Carrinho</button>
+
+                    <!-- Product Tabs -->
+                    <div class="product-tabs">
+                        <div class="tab-buttons">
+                            <button class="tab-btn active" data-tab="description">Descrição</button>
+                            <button class="tab-btn" data-tab="composition">Composição</button>
+                        </div>
+
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="description">
+                                <p>Vestido <strong>Floral Verão</strong> da coleção Turkesa – uma peça perfeita para os dias quentes de verão. Com estampado floral elegante, corte fluido e feminino que realça a silhueta. Ideal para ocasiões casuais ou eventos mais formais. O tecido leve e respirável proporciona conforto durante todo o dia, enquanto o design versátil permite combinações infinitas com acessórios.</p>
+                            </div>
+                            <div class="tab-pane" id="composition">
+                                <p><strong>Composição:</strong></p>
+                                <ul>
+                                    <li>95% Algodão</li>
+                                    <li>5% Elastano</li>
+                                </ul>
+                                <p><strong>Cuidados:</strong></p>
+                                <ul>
+                                    <li>Lavar à máquina a 30°C</li>
+                                    <li>Não usar lixívia</li>
+                                    <li>Passar a ferro a baixa temperatura</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Shipping Info -->
+                    <div class="shipping-info">
+                        <div class="info-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="1" y="3" width="15" height="13"></rect>
+                                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                            </svg>
+                            <span>Entregas em 24h</span>
+                        </div>
+                        <div class="info-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M12 6v6l4 2"></path>
+                            </svg>
+                            <span>Portes grátis em compras superiores a 155€</span>
+                        </div>
+                        <div class="info-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="3 6 5 6 21 6"></polyline>
+                                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                            </svg>
+                            <span>Trocas e devoluções no prazo de 14 dias</span>
+                        </div>
+                    </div>
+
+                    <!-- Payment Methods -->
+                    <div class="payment-methods-product">
+                        <p>Pagamentos Seguros</p>
+                        <div class="payment-icons-product">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Pay">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Info Column -->
+                <div class="footer-column">
+                    <h4>Info</h4>
+                    <ul>
+                        <li><a href="contactos.html">Contactos</a></li>
+                        <li><a href="gift-card.html">Gift card</a></li>
+                        <li><a href="faq.html">FAQ's</a></li>
+                        <li><a href="envios.html">Envios</a></li>
+                        <li><a href="trocas.html">Trocas e devoluções</a></li>
+                    </ul>
+                </div>
+
+                <!-- Políticas Column -->
+                <div class="footer-column">
+                    <h4>Políticas</h4>
+                    <ul>
+                        <li><a href="termos.html">Termos e condições</a></li>
+                        <li><a href="privacidade.html">Política de Privacidade e Cookies</a></li>
+                        <li><a href="litigios.html">Resolução de Litígios</a></li>
+                        <li><a href="https://www.livroreclamacoes.pt/" target="_blank" rel="noopener noreferrer">Livro de Reclamações</a></li>
+                    </ul>
+                </div>
+
+                <!-- Apoio ao Cliente Column -->
+                <div class="footer-column">
+                    <h4>Apoio ao Cliente</h4>
+                    <ul>
+                        <li>De Seg. a Sáb. das 10H às 19H</li>
+                        <li>Telemovel & Whatsapp: 912 698 872</li>
+                        <li>(Chamada para rede móvel nacional)</li>
+                        <li>Email: turkesashop@gmail.com</li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter Column -->
+                <div class="footer-column footer-newsletter">
+                    <h4>Keep up with Turkesa</h4>
+                    <p>Subscreve a nossa newsletter e recebe todas as novidades e campanhas no teu email.</p>
+                    <form class="newsletter-form">
+                        <input type="text" placeholder="Nome" required>
+                        <input type="email" placeholder="Email" required>
+                        <button type="submit" class="btn-subscribe">SUBSCREVER</button>
+                    </form>
+                    <p class="footer-legal-text">Este site está protegido pela Política de privacidade da hCaptcha e da hCaptcha e aplicam-se os Termos de serviço dos mesmos</p>
+                </div>
+            </div>
+
+            <!-- Social Media -->
+            <div class="footer-social-section">
+                <h4>Redes sociais</h4>
+                <div class="footer-social-icons">
+                    <a href="https://www.instagram.com/turkesashop_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                    <a href="https://www.facebook.com/turkesashop/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="footer-bottom-left">
+                    <div class="language-selector-footer">
+                        <button class="language-option-footer" data-lang="pt">PT</button>
+                        <button class="language-option-footer" data-lang="en">EN</button>
+                        <button class="language-option-footer" data-lang="es">ES</button>
+                    </div>
+                    <select class="footer-select">
+                        <option>EUR €</option>
+                    </select>
+                </div>
+                <div class="footer-bottom-center">
+                    <p data-i18n="footerCopyright">© Todos os direitos reservados 2025 . Turkesa Shop . Powered by A&G business</p>
+                </div>
+                <div class="footer-bottom-right">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/200px-Mastercard-logo.svg.png" alt="Mastercard">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Pay">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Carrinho</h3>
+            <button class="close-cart" id="closeCart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart">O seu carrinho está vazio</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">0.00€</span>
+            </div>
+            <button class="btn-primary checkout-btn">Finalizar Compra</button>
+        </div>
+    </div>
+
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/351936189715?text=Olá!%20Gostaria%20de%20mais%20informações." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <script src="translations.js"></script>
+    <script src="language.js"></script>
+    <script src="script.js"></script>
+    <script src="product.js"></script>
+</body>
+</html>

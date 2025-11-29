@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encomenda Confirmada - Turkesa</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .success-container {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .success-content {
+            text-align: center;
+            max-width: 600px;
+        }
+
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            background-color: #6EDDD4;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+        }
+
+        .success-icon svg {
+            width: 40px;
+            height: 40px;
+            stroke: white;
+            stroke-width: 3;
+        }
+
+        .success-content h1 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--text-color);
+        }
+
+        .success-content p {
+            font-size: 16px;
+            color: var(--text-light);
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .order-number {
+            background-color: var(--secondary-color);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+
+        .order-number strong {
+            font-weight: 700;
+            color: var(--text-color);
+        }
+
+        .success-actions {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="announcement-bar">
+            <p>Portes grátis em compras superiores a 50€</p>
+        </div>
+        <nav class="navbar">
+            <div class="container">
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Abrir menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="logo">
+                    <a href="index.html">TURKESA</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Success Content -->
+    <div class="success-container">
+        <div class="success-content">
+            <div class="success-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+            </div>
+
+            <h1>Encomenda Confirmada!</h1>
+            <p>Obrigado pela sua compra. Recebemos o seu pedido e estamos a processar a sua encomenda.</p>
+
+            <div class="order-number">
+                <p><strong>Número da Encomenda:</strong> #TRK<span id="orderNumber"></span></p>
+            </div>
+
+            <p>Receberá um email de confirmação em breve com os detalhes do envio e informações de rastreamento.</p>
+
+            <div class="success-actions">
+                <a href="index.html" class="btn-primary">Continuar a Comprar</a>
+                <a href="#orders" class="btn-secondary">Ver Encomendas</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h4>Ajuda</h4>
+                    <ul>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#shipping">Envios</a></li>
+                        <li><a href="#returns">Devoluções</a></li>
+                        <li><a href="#contact">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Sobre</h4>
+                    <ul>
+                        <li><a href="#about">Sobre Nós</a></li>
+                        <li><a href="#stores">Lojas</a></li>
+                        <li><a href="#sustainability">Sustentabilidade</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#privacy">Política de Privacidade</a></li>
+                        <li><a href="#terms">Termos e Condições</a></li>
+                        <li><a href="#cookies">Política de Cookies</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Seguir-nos</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="payment-methods">
+                <h4>Métodos de Pagamento</h4>
+                <div class="payment-icons">
+                    <img src="mastercard.png" alt="Mastercard" title="Mastercard">
+                    <img src="AmericanExpress.png" alt="American Express" title="American Express">
+                    <img src="paypal.png" alt="PayPal" title="PayPal">
+                    <img src="applePlay.png" alt="Apple Pay" title="Apple Pay">
+                    <img src="googlePay.png" alt="Google Pay" title="Google Pay">
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Turkesa. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Generate random order number
+        document.getElementById('orderNumber').textContent = Math.floor(100000 + Math.random() * 900000);
+    </script>
+</body>
+</html>
