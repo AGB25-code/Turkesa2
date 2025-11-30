@@ -494,10 +494,13 @@ function hideCartSidebar() {
 
 // Initialize Cookie Banner
 function initializeCookieBanner() {
+    const banner = document.getElementById('cookieConsent');
+    if (!banner) return; // Some pages don't render the cookie banner
+
     const cookieConsent = localStorage.getItem('cookieConsent');
     if (!cookieConsent) {
         setTimeout(() => {
-            document.getElementById('cookieConsent').classList.add('show');
+            banner.classList.add('show');
         }, 1000);
     }
 }
@@ -505,7 +508,10 @@ function initializeCookieBanner() {
 // Accept Cookies
 function acceptCookies() {
     localStorage.setItem('cookieConsent', 'accepted');
-    document.getElementById('cookieConsent').classList.remove('show');
+    const banner = document.getElementById('cookieConsent');
+    if (banner) {
+        banner.classList.remove('show');
+    }
 }
 
 // Manage Cookies (placeholder)
