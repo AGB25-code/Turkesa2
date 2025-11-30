@@ -404,6 +404,20 @@ function removeFromCart(productId) {
     updateCart();
 }
 
+// Clear entire cart
+function clearCart() {
+    if (cart.length === 0) {
+        return;
+    }
+
+    // Ask for confirmation
+    const confirmClear = confirm('Tem certeza que deseja esvaziar o carrinho?');
+    if (confirmClear) {
+        cart = [];
+        updateCart();
+    }
+}
+
 // Update Quantity
 function updateQuantity(productId, change) {
     const item = cart.find(item => item.id === productId);
@@ -741,8 +755,47 @@ function resetMobileSubmenus() {
 }
 
 function setupMobileSubmenus() {
-    // Mobile menu links are now handled by the general smooth scroll handler
-    // This function is kept for any future mobile-specific submenu logic
+    // Handle submenu toggle on mobile
+    const navItemsWithSubmenu = document.querySelectorAll('.nav-item.has-submenu');
+
+    navItemsWithSubmenu.forEach(item => {
+        const link = item.querySelector('a');
+        const submenu = item.querySelector('.submenu');
+
+        if (!link || !submenu) return;
+
+        // Remove any existing listeners to prevent duplicates
+        const newLink = link.cloneNode(true);
+        link.parentNode.replaceChild(newLink, link);
+
+        newLink.addEventListener('click', (e) => {
+            // Only handle on mobile (when menu is in mobile mode)
+            if (window.innerWidth <= 980) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                // Close other open submenus
+                navItemsWithSubmenu.forEach(otherItem => {
+                    if (otherItem !== item && otherItem.classList.contains('open')) {
+                        otherItem.classList.remove('open');
+                        const otherSubmenu = otherItem.querySelector('.submenu');
+                        if (otherSubmenu) {
+                            otherSubmenu.style.maxHeight = null;
+                        }
+                    }
+                });
+
+                // Toggle current submenu
+                item.classList.toggle('open');
+
+                if (item.classList.contains('open')) {
+                    submenu.style.maxHeight = submenu.scrollHeight + 'px';
+                } else {
+                    submenu.style.maxHeight = null;
+                }
+            }
+        });
+    });
 }
 
 function initializeMobileNav() {
@@ -883,6 +936,12 @@ function initializeEventListeners() {
     const cartOverlay = document.getElementById('cartOverlay');
     if (cartOverlay) {
         cartOverlay.addEventListener('click', hideCartSidebar);
+    }
+
+    // Clear Cart Button
+    const clearCartBtn = document.getElementById('clearCart');
+    if (clearCartBtn) {
+        clearCartBtn.addEventListener('click', clearCart);
     }
 
     // Cookie Consent

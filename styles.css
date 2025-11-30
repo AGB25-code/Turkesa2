@@ -1747,6 +1747,29 @@ body.filtering-active .breadcrumb {
     box-shadow: 0 -3px 15px rgba(0, 0, 0, 0.05);
 }
 
+.btn-clear-cart {
+    width: 100%;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    background-color: transparent;
+    color: #ff4444;
+    border: 1px solid #ff4444;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-clear-cart:hover {
+    background-color: #ff4444;
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(255, 68, 68, 0.3);
+}
+
 .cart-total {
     display: flex;
     justify-content: space-between;
