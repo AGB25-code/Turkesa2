@@ -779,6 +779,17 @@ function initializeMobileNav() {
     }
 
     const openMenu = () => {
+        // Ensure cart overlay/sidebar is closed so it doesn't block menu clicks
+        if (typeof hideCartSidebar === 'function') {
+            hideCartSidebar();
+        } else {
+            const cartOverlay = document.getElementById('cartOverlay');
+            const cartSidebar = document.getElementById('cartSidebar');
+            if (cartOverlay) cartOverlay.classList.remove('active');
+            if (cartSidebar) cartSidebar.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
         mainNav.classList.add('open');
         overlay.classList.add('active');
         toggleBtn.classList.add('active');
